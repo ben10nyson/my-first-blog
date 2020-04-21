@@ -4,7 +4,6 @@ from django.utils import timezone
 from .forms import PostForm
 from django.shortcuts import redirect
 
-# Create your views here.
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
